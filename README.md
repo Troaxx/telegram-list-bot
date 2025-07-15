@@ -6,7 +6,7 @@ A Telegram bot that manages lists using simple keyword commands. Perfect for pri
 
 - **Create & manage multiple lists** with simple commands
 - **Add/remove items** from lists
-- **Quick add multiple items** by mentioning the bot: `@meowlister_bot groceries milk, bread, eggs`
+- **Quick add multiple items** by mentioning the bot: `@bot groceries milk, bread, eggs`
 - **Search across all lists** for specific items
 - **Case-insensitive commands** for easy use
 - **Data persistence** - your lists are saved between bot restarts
@@ -77,13 +77,13 @@ Here's what the bot output looks like:
 
 ### Quick Add with Mentions (Multiple Items)
 ```
-> @meowlister_bot groceries butter, cheese, yogurt
+> @bot groceries butter, cheese, yogurt
 ✅ Added 3 items to 'groceries':
   • butter
   • cheese  
   • yogurt
 
-> @meowlister_bot movies The Godfather, Pulp Fiction, Goodfellas
+> @bot movies The Godfather, Pulp Fiction, Goodfellas
 ✅ Added 3 items to 'movies to watch':
   • The Godfather
   • Pulp Fiction
@@ -133,7 +133,7 @@ Here's what the bot output looks like:
 | `create <list_name>` | Create a new list | `create groceries` |
 | `lists` | Show all lists | `lists` |
 | `add <list_name> <item>` | Add item to list | `add groceries milk` |
-| `@meowlister_bot <list_name> <item1>, <item2>` | Add multiple items at once | `@meowlister_bot groceries milk, bread, eggs` |
+| `@bot <list_name> <item1>, <item2>` | Add multiple items at once | `@meowlister_bot groceries milk, bread, eggs` |
 | `remove <list_name> <item>` | Remove item from list | `remove groceries milk` |
 | `show <list_name>` | Show all items in list | `show groceries` |
 | `delete <list_name>` | Delete entire list | `delete groceries` |
