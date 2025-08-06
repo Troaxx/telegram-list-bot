@@ -7,6 +7,7 @@ import logging
 import os
 import shutil
 from datetime import datetime
+import pytz
 from typing import Dict, List, Optional
 
 from config import BotConfig, Messages
@@ -72,7 +73,7 @@ class ListManager:
     def _backup_corrupted_file(self) -> None:
         """Create a backup of corrupted data file."""
         if os.path.exists(self.data_file):
-            backup_name = f"{self.data_file}.backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            backup_name = f"{self.data_file}.backup_{datetime.now(pytz.UTC).strftime('%Y%m%d_%H%M%S')}"
             try:
                 shutil.copy2(self.data_file, backup_name)
                 logger.info(f"Corrupted file backed up to {backup_name}")

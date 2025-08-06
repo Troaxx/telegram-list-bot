@@ -299,7 +299,7 @@ def main():
             print("🌐 Open to all chats")
         print("Press Ctrl+C to stop the bot")
         
-        application.run_polling(allowed_updates=Update.ALL_TYPES)
+        application.run_polling()
         
     except Exception as e:
         logger.error(f"Failed to start bot: {e}")
